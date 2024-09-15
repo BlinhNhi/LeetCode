@@ -6,8 +6,7 @@ public class Main {
             int soLuongChuSo = tinhSoChuSo(a);
             if(soLuongChuSo % 2 == 0){
                 count ++;
-            }
-        }
+            }}
         return  count;
     }
     private static int tinhSoChuSo(int a) {
@@ -27,10 +26,7 @@ public class Main {
 //        for(int ai : nums ){
 //            System.out.println("Count ai : " + ai);
 //        }
-
         System.out.println(findNumbers(nums));
 //        System.out.println(findNumbers(99));
-
-
     }
 }

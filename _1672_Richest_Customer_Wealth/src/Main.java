@@ -17,18 +17,17 @@ public class Main {
             if (tongTaiSan[i] > max){
                 max = tongTaiSan[i];
             }
-
         }
         System.out.println("Tai San Lon Nhat : " +max);
         return max;
     }
-
     public static void main(String[] args) {
-        int [][] a ={{1,2,3},{3,2,1}};
+//        int [][] a ={{1,2,3},{3,2,1}};
         int [][] b ={{1,2,3},{3,2,4},{1,5,2}};
 
-        maximumWealth(a);
         maximumWealth(b);
+
+//        maximumWealth(a);
 //        int[][]b = new int[2][3];
 //        int soHang = a.length; // 2 hàng
 //        int soCot = a[0].length; // 3 cột

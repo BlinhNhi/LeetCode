@@ -12,8 +12,8 @@ public class Main {
     private static int tinhSoChuSo(int a) {
         //2 Đếm số chữ số , 9 -> 1 , 29 -> 2
         int count = 0;
-        int kq = a;
-        while (kq !=0){
+        int kq=a;
+        while(kq != 0){
             kq = a/10;
             a = kq;
             count ++;

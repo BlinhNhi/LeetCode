@@ -4,8 +4,9 @@ public class Main {
         if(n==0){
             return 1;
         }
-        //Cong Thuc
-        return n * GiaiThua(n-1);
+        //Cong Thuc Quy Nạp
+        int t =n * GiaiThua(n-1);
+        return t;
     }
     public static void main(String[] args) {
         System.out.println(GiaiThua(0));

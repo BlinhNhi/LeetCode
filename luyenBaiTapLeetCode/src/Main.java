@@ -1,18 +1,32 @@
 public class Main {
-    public static void main(String[] args) {
-        int[] a ={3,2,2,3};
-        System.out.println(removeElement(a,2));
-        System.out.println("DONE");
+    public static  void  merge(int[] n1, int m, int[] n2, int n) {
+        for (int ai:n2 ){
+            chenPhanTuVaoMang(ai,n1,m);
+            m++;
+        }
     }
-    public static int removeElement(int[] a, int val) {
-        int l = 0;
-        for (int i = 0; i < a.length; i++) {
-            if(a[i] == val){
-                a[l] = a[i];
-                l++;
+    private static void chenPhanTuVaoMang(int x, int[] a, int m) {
+            boolean timDuocK = false;
+        for (int k = 0; k < m; k++) {
+            if (a[k] > x){
+                timDuocK = true;
+                for (int i = m-1; i >= k; i--) {
+                    a[i+1] = a[i];
+                }
+                a[k] = x;
+                break;
             }
         }
-        return l;
+        if (timDuocK == false){
+            a[m] = x;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] n1={1,2,3,0,0,0};
+        int[] n2={2,3,6};
+        merge(n1,3,n2,3);
+        System.out.println("DONE");
     }
 
 }

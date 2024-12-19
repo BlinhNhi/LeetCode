@@ -1,30 +1,28 @@
 public class Main {
     public static  void  merge(int[] n1, int m, int[] n2, int n) {
-        for (int ai:n2 ){
-            chenPhanTuVaoMang(ai,n1,m);
-            m++;
-        }
+         int k = (m+n) - 1;
+         int i = m-1;
+         int j = n-1;
+         while (k >= 0){
+             if(j < 0){
+                 n1[k] = n1[i];
+             } else if (i < 0) {
+                 n1[k] = n2[j];
+             } else if (n1[i] > n2[j]) {
+                 n1[k] = n1[i];
+                 i--;
+             } else if (n1[i] <= n2[j]) {
+                 n1[k] = n2[j];
+                 j--;
+             }
+             k--;
+         }
     }
-    private static void chenPhanTuVaoMang(int x, int[] a, int m) {
-            boolean timDuocK = false;
-        for (int k = 0; k < m; k++) {
-            if (a[k] > x){
-                timDuocK = true;
-                for (int i = m-1; i >= k; i--) {
-                    a[i+1] = a[i];
-                }
-                a[k] = x;
-                break;
-            }
-        }
-        if (timDuocK == false){
-            a[m] = x;
-        }
-    }
+
 
     public static void main(String[] args) {
         int[] n1={1,2,3,0,0,0};
-        int[] n2={2,3,6};
+        int[] n2={2,5,6};
         merge(n1,3,n2,3);
         System.out.println("DONE");
     }

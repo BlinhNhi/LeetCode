@@ -1,22 +1,23 @@
 public class Main {
     public static  void  merge(int[] n1, int m, int[] n2, int n) {
-         int k = (m+n) - 1;
-         int i = m-1;
-         int j = n-1;
-         while (k >= 0){
-             if(j < 0){
-                 n1[k] = n1[i];
-             } else if (i < 0) {
-                 n1[k] = n2[j];
-             } else if (n1[i] > n2[j]) {
-                 n1[k] = n1[i];
-                 i--;
-             } else if (n1[i] <= n2[j]) {
-                 n1[k] = n2[j];
-                 j--;
-             }
-             k--;
-         }
+        for(int ai : n2){
+            chenPhanTuVaoMang(ai,n1,m);
+            m++;
+        }
+    }
+
+    private static void chenPhanTuVaoMang(int ai, int[] n1, int m) {
+        for (int i = 0; i < m; i++) {
+            if(n1[i] > ai ){
+                for (int j = m-1; j >= i; j--) {
+                    n1[j + 1] = n1[j];
+                }
+                n1[i] = ai;
+            }
+            else{
+                n1[m] = ai;
+            }
+        }
     }
 
 

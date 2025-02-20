@@ -6,18 +6,13 @@ public class Main {
     }
 
     public static int removeElement(int[] a, int val) {
-        int n = a.length;
-        for (int i = 0; i < n ;) {
-            if(a[i] == val){
-                //xoa phan tu a[i]
-                for(int j = i ; j <= (n-2);j++){
-                    a[j] = a[j+1];
-                }
-                n--;
-            }else {
-                i++;
+        int inValid = 0;
+        for(int i = 0 ; i < a.length ; i++){
+            if(a[i] != val){
+                a[inValid] = a[i];
+                inValid++;
             }
         }
-        return n;
+        return  inValid;
     }
 }

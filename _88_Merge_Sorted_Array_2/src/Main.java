@@ -5,15 +5,19 @@ public class Main {
         int k = (m+n) - 1;
         while (k >= 0){
             if(j < 0){
+                // j < 0 (length arr of nums2 < 0 ) thì lấy value của mảng nums1
                 n1[k] = n1[i];
                 i--;
             }else if(i < 0){
+                // i < 0 (length arr of nums1 < 0 ) thì lấy value của mảng nums2
                 n1[k] = n2[j];
                 j--;
             } else if (n1[i] > n2[j]) {
+                // value của mảng 1 > mảng 2 thì lấy value mảng 1
                 n1[k] = n1[i];
                 i--;
             }else {
+                // value của mảng 2 > mảng 1 thì lấy value mảng 2
                 n1[k] = n2[j];
                 j--;
             }

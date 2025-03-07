@@ -11,6 +11,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             int minIndex = i;
             for (int j = i+1; j <n ; j++) {
+//                chạy hết từ i+1 đến n-1 để tìm ra số nhỏ nất gán vào min index
                 if(a[j] < a[minIndex]){
                     minIndex = j;
                 }

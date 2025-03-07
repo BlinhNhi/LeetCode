@@ -6,7 +6,7 @@ public class Main {
         // for này để tăng count của mỗi i lên
         for (int i = 0; i < arr.length; i++) {
             char c = arr[i]; //arr[0] = l = 108
-            int index = (int)c; // 108
+            int index = (int)c; // 108  // parse string ra số
             count[index]++; // 108 có count là 1
         }
 //        for này để kiểm tra xem ele nào có count = 1 đầu tiên sẽ trả về vị trí đó

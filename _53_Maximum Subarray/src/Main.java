@@ -9,22 +9,6 @@ public class Main {
     }
 
     public static int maxSubArray(int[] nums) {
-       /* int length = nums.length;
-        int sum = 0;
-        int maxSum = nums[0];
-        for (int i = 0; i < length; i++) {
-            sum = sum + nums[i];
-            if(sum < 0){
-                sum = nums[i];
-            }else{
-                sum = sum + nums[i];
-            }
-
-            if(sum > maxSum){
-                maxSum = sum;
-            }
-        }
-        */
         int length = nums.length;
         int sum = 0;
         int maxSum = nums[0];
